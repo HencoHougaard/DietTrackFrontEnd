@@ -1,0 +1,46 @@
+<link rel="stylesheet" type="text/css" href="cssReg.css">
+<div class="col-md-6 col-md-offset-3">
+  <h1 style ="padding-left:30px" align = "center">Diet Tracker</h1>
+  <body class="background" background="grocery-list-with-vegetables.jpg">
+  <form name="form" ng-submit="vm.register()" role="form">
+    <table style = "width: 60%" align = "center" >
+      <h2 style ="padding-left:30px" align = "center" > Registration </h2>
+      <div class="form-group" ng-class="{ 'has-error': form.firstName.$dirty && form.firstName.$error.required }">
+        <label for="username" style="padding-left:250px" align = "right">ID</label>
+        <input type="text" name="id" id="id" align = "right" class="form-control" ng-model="vm.user.id" required />
+        <span ng-show="form.firstName.$dirty && form.firstName.$error.required" class="help-block"></span>
+      </div>
+      <div class="form-group" ng-class="{ 'has-error': form.lastName.$dirty && form.lastName.$error.required }">
+        <label for="username" style="padding-left:250px" align = "right">Username</label>
+        <input type="text" name="username" id="username" align = "right" class="form-control" ng-model="vm.user.username" required />
+        <span ng-show="form.lastName.$dirty && form.lastName.$error.required" class="help-block"></span>
+      </div>
+      <div class="form-group" ng-class="{ 'has-error': form.username.$dirty && form.username.$error.required }">
+        <label for="username" style="padding-left:250px" align = "right">Gender</label>
+        <input type="text" name="gender" id="gender" class="form-control" ng-model="vm.user.gender" required />
+        <span ng-show="form.username.$dirty && form.username.$error.required" class="help-block"></span>
+      </div>
+      <div class="form-group" ng-class="{ 'has-error': form.username.$dirty && form.username.$error.required }">
+        <label for="username" style="padding-left:250px" align = "right">Date of Birth</label>
+        <input type="text" name="dateOfBirth" id="dateOfBirth" class="form-control" ng-model="vm.user.dateOfBirth" required />
+        <span ng-show="form.username.$dirty && form.username.$error.required" class="help-block"></span>
+      </div>
+      <div class="form-group" ng-class="{ 'has-error': form.username.$dirty && form.username.$error.required }">
+        <label for="username" style="padding-left:250px" align = "right">Email</label>
+        <input type="text" name="email" id="email" class="form-control" ng-model="vm.user.email" required />
+        <span ng-show="form.username.$dirty && form.username.$error.required" class="help-block"></span>
+      </div>
+      <div class="form-group" ng-class="{ 'has-error': form.password.$dirty && form.password.$error.required }">
+        <label for="password" style="padding-left:250px" align = "right">Password</label>
+        <input type="password" name="password" id="password" class="form-control" ng-model="vm.user.password" required />
+        <span ng-show="form.password.$dirty && form.password.$error.required" class="help-block"></span>
+      </div>
+      <div class="form-actions">
+        <button type="submit" ng-disabled="form.$invalid || vm.dataLoading" class="btn btn-primary">Register</button>
+        <a href="#!/login" class="btn btn-link">Cancel</a>
+      </div>
+    </table>
+  </form>
+  </body>
+</div>
+</div>
